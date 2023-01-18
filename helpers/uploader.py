@@ -1,4 +1,3 @@
-# (c) @AbirHasan2005
 import asyncio
 import time
 from configs import Config
@@ -30,9 +29,9 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("Developer - @AbirHasan2005", url="https://t.me/AbirHasan2005")],
-                        [InlineKeyboardButton("Support Group", url="https://t.me/linux_repo"),
-                         InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")]
+                        [InlineKeyboardButton("info", url="https://t.me/tweetface/2")],
+                        [InlineKeyboardButton("Support Group", url="https://t.me/botsupportastra"),
+                         InlineKeyboardButton("Bots Channel", url="https://t.me/Astra_botz")]
                     ]
                 )
             )
@@ -51,9 +50,9 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("Developer - @AbirHasan2005", url="https://t.me/AbirHasan2005")],
-                        [InlineKeyboardButton("Support Group", url="https://t.me/linux_repo"),
-                         InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")]
+                        [InlineKeyboardButton("info", url="https://t.me/tweetface/2")],
+                        [InlineKeyboardButton("Support Group", url="https://t.me/botsupportastra"),
+                         InlineKeyboardButton("Bots Channel", url="https://t.me/Astra_botz")]
                     ]
                 )
             )
