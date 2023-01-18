@@ -50,7 +50,7 @@ async def start_handler(bot: Client, m: Message):
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("source code", url="https://github.com/Hackermanker")],
+                [InlineKeyboardButton("info", url="https://t.me/tweetface/2")],
                 [InlineKeyboardButton("Support Group", url="https://t.me/botsupportastra"),
                  InlineKeyboardButton("Bots Channel", url="https://t.me/Astra_botz")],
                 [InlineKeyboardButton("Open Settings", callback_data="openSettings")],
@@ -333,7 +333,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                     await asyncio.sleep(e.x)
                     invite_link = await bot.create_chat_invite_link(chat_id=(int(Config.UPDATES_CHANNEL) if Config.UPDATES_CHANNEL.startswith("-100") else Config.UPDATES_CHANNEL))
                 await cb.message.edit(
-                    text="**You Still Didn't Join ☹️, Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
+                    text="**Join My Updates Channel to use this Bot!**",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -357,7 +357,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         await cb.message.edit(
             text=Config.START_TEXT,
             parse_mode="Markdown",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer - @AbirHasan2005", url="https://t.me/AbirHasan2005"), InlineKeyboardButton("Support Group", url="https://t.me/linux_repo")], [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")]]),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("info", url="https://t.me/tweetface/2"), InlineKeyboardButton("Support Group", url="https://t.me/botsupportastra")], [InlineKeyboardButton("Bots Channel", url="https://t.me/Astra_botz")]]),
             disable_web_page_preview=True
         )
     elif "showThumbnail" in cb.data:
@@ -425,11 +425,11 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         await OpenSettings(cb.message, cb.from_user.id)
     elif cb.data.startswith("renameFile_"):
         if (QueueDB.get(cb.from_user.id, None) is None) or (QueueDB.get(cb.from_user.id) == []):
-            await cb.answer("Sorry Unkil, Your Queue is Empty!", show_alert=True)
+            await cb.answer("Sorry, Your Queue is Empty!", show_alert=True)
             return
-        merged_vid_path = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/[@AbirHasan2005]_Merged.{FormtDB.get(cb.from_user.id).lower()}"
+        merged_vid_path = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/[@Oriksonic]_Merged.{FormtDB.get(cb.from_user.id).lower()}"
         if cb.data.split("_", 1)[-1] == "Yes":
-            await cb.message.edit("Okay Unkil,\nSend me new file name!")
+            await cb.message.edit("Okay,\nSend me new file name!")
             try:
                 ask_: Message = await bot.listen(cb.message.chat.id, timeout=300)
                 if ask_.text:
