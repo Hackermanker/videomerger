@@ -1,9 +1,3 @@
-# (c) @AbirHasan2005
-# This is very simple Telegram Videos Merge Bot.
-# Coded by a Nub.
-# Don't Laugh seeing the codes.
-# Me learning.
-
 import os
 import time
 import string
