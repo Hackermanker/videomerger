@@ -80,7 +80,7 @@ async def videos_handler(bot: Client, m: Message):
         return
     input_ = f"{Config.DOWN_PATH}/{m.from_user.id}/input.txt"
     if os.path.exists(input_):
-        await m.reply_text("Sorry,\nAlready One in Progress!\nDon't Spam Plox.")
+        await m.reply_text("Sorry,\nAlready One in Progress!\nDon't Spam.")
         return
     isInGap, sleepTime = await CheckTimeGap(m.from_user.id)
     if isInGap is True:
@@ -310,7 +310,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 )
             )
         except FloodWait as e:
-            await cb.answer("Don't Spam Unkil!", show_alert=True)
+            await cb.answer("Don't Spam!", show_alert=True)
             await asyncio.sleep(e.x)
         except:
             media = message_.video or message_.document
@@ -321,7 +321,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 user = await bot.get_chat_member(chat_id=(int(Config.UPDATES_CHANNEL) if Config.UPDATES_CHANNEL.startswith("-100") else Config.UPDATES_CHANNEL), user_id=cb.message.chat.id)
                 if user.status == "kicked":
                     await cb.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/linux_repo).",
+                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/botsupportastra).",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -349,7 +349,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 return
             except Exception:
                 await cb.message.edit(
-                    text="Something went Wrong. Contact my [Support Group](https://t.me/linux_repo).",
+                    text="Something went Wrong. Contact my [Support Group](https://t.me/botsupportastra).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -406,7 +406,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 )
             )
         else:
-            await cb.answer("Sorry Unkil, Your Queue is Empty!", show_alert=True)
+            await cb.answer("Sorry, Your Queue is Empty!", show_alert=True)
     elif "triggerGenSS" in cb.data:
         generate_ss = await db.get_generate_ss(cb.from_user.id)
         if generate_ss is True:
