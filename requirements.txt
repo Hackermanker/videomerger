@@ -1,4 +1,5 @@
-pyrogram==2.0.102
+pyrogram
+ffmpeg
 TgCrypto
 hachoir
 Pillow
