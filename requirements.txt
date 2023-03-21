@@ -1,7 +1,6 @@
 pyrogram==1.4.16
 TgCrypto
 hachoir
-ffmpeg
 Pillow
 aiohttp
 motor
