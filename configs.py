@@ -4,12 +4,12 @@ import os
 
 
 class Config(object):
-    API_ID = os.environ.get("API_ID")
-    API_HASH = os.environ.get("API_HASH")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN")
+    API_ID = os.environ.get("25062134")
+    API_HASH = os.environ.get("1c2c6d7244d4576b2baab88337b1233a")
+    BOT_TOKEN = os.environ.get("7098978512:AAHMV8j-r5YBSCryvWHIkMrE8vtNbbo7bxw")
     SESSION_NAME = os.environ.get("SESSION_NAME", "Video-Merge-Bot")
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL")
-    LOG_CHANNEL = os.environ.get("LOG_CHANNEL")
+    LOG_CHANNEL = os.environ.get("-1002208942976")
     DOWN_PATH = os.environ.get("DOWN_PATH", "./downloads")
     TIME_GAP = int(os.environ.get("TIME_GAP", 5))
     MAX_VIDEOS = int(os.environ.get("MAX_VIDEOS", 5))
@@ -17,7 +17,7 @@ class Config(object):
     STREAMTAPE_API_PASS = os.environ.get("STREAMTAPE_API_PASS")
     MONGODB_URI = os.environ.get("MONGODB_URI")
     BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
-    BOT_OWNER = int(os.environ.get("BOT_OWNER", 1445283714))
+    BOT_OWNER = int(os.environ.get("BOT_OWNER", 6302921275))
 
     START_TEXT = """
 Hi 👋, I am a Video Merge Bot!
